@@ -1,0 +1,32 @@
+<div class="pd-25 my-dialog">
+    <div class="header-title center-align">
+        <h1>Image/Text Processing</h1>
+    </div>
+    <div class="content col-md-12 col-sm-12 col-12" *ngIf ="!uploadClicked">
+        <label class="image-upload-container btn btn-bwm">
+            <span class="text-area-title">Upload Image/text file to Analysis:</span>
+            <input #imageInput class = "" max = "1"
+                   type="file"
+                   (change)="selectFile(imageInput)">
+        </label>
+
+        <img *ngIf ="urlOfImage != null && urlOfImage != undefined && urlOfImage != ''"[src]="urlOfImage" class="preview"/>
+        
+    </div>
+
+    <div class="footer"  *ngIf ="!uploadClicked">
+        <button class="btn-primary" type="button" (click)="onUploadBtnClicked()" [disabled]="IsDisable()">Upload Image</button>
+    </div>
+
+    <div class="" *ngIf="uploadClicked">
+        <div class="" *ngIf="urlOfImage && urlOfImage != '' && showImg">
+            <img [src]="urlOfImage" class="preview"></div>
+        <div class="img-desc" *ngIf="uploadClicked"><label>{{UploadImageService.imgDesc}}</label></div>
+    </div>
+
+    <div class="footer"  *ngIf ="uploadClicked">
+        <button class="btn-primary mr-r-10" type="button" (click)="getData()">Get Result</button>
+        <button class="btn-primary" type="button" (click)="onBackBtn()" >>>Back</button>
+    </div>
+
+</div>
