@@ -1,5 +1,7 @@
 # ImageUploadAngRepo
 
+The Image/Text processing application is built with Angular on the front-end and Node.js on the back-end, integrating Node.js with Azure Blob Storage for uploading documents. These documents undergo Sentiment Analysis through Azure Logic Apps, with findings preserved in Azure File Shares. The application then retrieves and showcases the analyzed data on the user interface.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.0.
 
 ## Development server
